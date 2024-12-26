@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  :root {
+    --background: #5B4430;
+    --foreground: 274 23% 6%;
+    --card: 0 0% 100%;
+    --card-foreground: 274 23% 6%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 274 23% 6%;
+    --primary: 262.1 83.3% 57.8%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 220 14.3% 95.9%;
+    --secondary-foreground: 220.9 39.3% 11%;
+    --muted: 220 14.3% 95.9%;
+    --muted-foreground: 220 8.9% 46.1%;
+    --accent: 220 14.3% 95.9%;
+    --accent-foreground: 220.9 39.3% 11%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 262.1 83.3% 57.8%;
+    --radius: 0.5rem;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%
+  }
+  .dark {
+    --background: #5B4430;
+    --background-overlay: #5B4430B3;
+    --foreground: 210 20% 98%;
+    --card: #D2975F;
+    --card-low-opacity: #d2975fbf !important;
+    --card-overlay: #D2975FB3;
+    --card-foreground: 210 20% 98%;
+    --popover: 274 23% 6%;
+    --popover-foreground: 210 20% 98%;
+    --primary: 263.4 70% 50.4%;
+    --primary-foreground: 210 20% 98%;
+    --secondary: 266 27.9% 16.9%;
+    --secondary-foreground: 210 20% 98%;
+    --muted: 266 27.9% 16.9%;
+    --muted-foreground: 217.9 10.6% 64.9%;
+    --accent: 266 27.9% 16.9%;
+    --accent-foreground: 210 20% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 20% 98%;
+    --border: 266 27.9% 16.9%;
+    --input: 266 27.9% 16.9%;
+    --ring: 263.4 70% 50.4%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 240 0% 0%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.body-bg {
+  background-color: var(--background);
+}
+
+.body-bg-pattern{
+  background: url('/asset/bg.png') repeat center center fixed;
+  background-color: var(--background-overlay);
+  background-blend-mode: overlay;
+}
+
+#app{
+  width: 100%;
+  height: 100%;
+}
+
+@font-face {
+  font-family: 'AVENGEANCE';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/AVENGEANCE.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Alexandria';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/fonts/Alexandria.ttf') format('truetype');
+}
+
+.font-avengeance {
+  font-family: 'AVENGEANCE', sans-serif;
+}
+
+.font-alexandria {
+  font-family: 'Alexandria', sans-serif;
+}
+
+@layer base {
+  .font-outline {
+    -webkit-text-stroke: 1px var(--background);
+  }
+  .font-outline-2 {
+    -webkit-text-stroke: 2px var(--background);
+  }
+  .font-outline-4 {
+    -webkit-text-stroke: 4px var(--background);
+  }
+  .font-outline-6 {
+    -webkit-text-stroke: 6px var(--background);
+  }
+  .font-outline-8 {
+    -webkit-text-stroke: 8px var(--background);
+  }
+  .outline-outer {
+   paint-order: stroke fill;
+  }
+}
+
+.card-bg {
+  background-color: var(--card);
+}
+
+
+.card-bg-dotted {
+  position:relative;
+  background-color: var(--card);
+  background-image: url('/asset/dotted-pattern.png');
+  background-size: 100%;
+  background-blend-mode: soft-light;
+}
+
+.card-bg-low {
+  background-color: var(--card-low-opacity);
+  background-blend-mode: difference;
+}

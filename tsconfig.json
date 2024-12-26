@@ -1,0 +1,23 @@
+{
+    "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "jsx": "react",
+        "module": "ESNext",
+        "esModuleInterop": true,
+        "target": "es6",
+        "noImplicitAny": false,
+        "moduleResolution": "node",
+        "sourceMap": true,
+        "baseUrl": ".",
+        "paths": {
+            "*": ["node_modules/*", "@types/*", "src/types/*"],
+            "@/*": ["./resources/js/*"]
+        },
+        "typeRoots": [
+            "./node_modules/@types"
+        ]
+    },
+    "include": ["./resources/js/**/*"],
+    "exclude": ["node_modules", "babel.config.js", "metro.config.js", "jest.config.js"],
+    "lib": ["es2016", "dom"]
+}
